@@ -1,5 +1,5 @@
 vim /etc/systemd/system/startup.service  
-```
+================================================
 [Unit]
 Description=Startup
 
@@ -8,12 +8,12 @@ ExecStart=/usr/local/bin/startup.sh
 
 [Install]
 WantedBy=default.target
-```
+================================================
 vim /usr/local/bin/startup.sh  
-```
+================================================
 #!/bin/bash
 echo "Some script" >> /tmp/test
-```
+================================================
 chmod 744 /usr/local/bin/startup.sh  
 chmod 664 /etc/systemd/system/startup.service  
 systemctl daemon-reload  
